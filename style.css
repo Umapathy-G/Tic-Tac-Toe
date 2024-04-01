@@ -1,13 +1,46 @@
+body{
+    background-color: #1A2A33;
+    overflow: hidden;
+}
+input{
+    background-color: black ;
+}
 .game-container{
-    box-shadow: 0 0 10px red;
-    width: 600px;
-    height: 500px;
-    margin: 120px auto;
+    box-shadow: 0 0 10px white;
+    max-width: 800px;
+    margin: 100px auto;
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
 }
-
+.start-btn{
+    background: #F2B137;
+    box-shadow: inset 0px -8px 0px #CC8B13;
+    border-radius: 15px;
+    font-weight: bold;
+    padding: 13px 15px;
+    font-size: 17px;
+}
+.start-btn:hover{
+    background: #CC8B13;
+    box-shadow: inset 0px -8px 0px #F2B137;
+}
+#title{
+    color: white;
+}
+.wrap{
+    margin: 50px auto;
+    width: 400px;
+    position: relative;
+}
+.strike{
+    height: 4px;
+    background-color: white !important;
+    border: 2px solid blue;
+    position: absolute;
+    border-radius: 5px;
+    border-spacing: 0;
+}
 .play-area{
     display: grid;
     grid-template-rows: repeat(3,1fr);
@@ -16,18 +49,58 @@
     margin: auto;
 }
 .box{
-    border: 0.5px solid gray;
+    border: 3px solid gray;
     width: 100px;
     height: 100px;
-    font-size: 50px;
+    font-size: 65px;
     font-weight: bolder;
     text-align: center;
 }
 .reset-btn{
-    margin-top: 20px;
-    padding: 10px 20px;
+    margin-top: 20px auto;
+    background: #F2B137;
+    box-shadow: inset 0px -8px 0px #CC8B13;
+    border-radius: 15px;
+    font-weight: bold;
+    padding: 13px 15px;
+    font-size: 17px;
 }
 #turn-msg{
     font-size: 25px;
     font-weight: bolder;
+    color: #F2B137;
+}
+#reload{
+    display: flex;
+    justify-content: end;
+}
+#reload-icon{
+    width: 20px;
+    background: #F2B137;
+    box-shadow: inset 0px -8px 0px #CC8B13;
+    border-radius: 15px;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 25px !important;
+    color: black;
+}
+#reload-icon:hover,.reset-btn:hover{
+    background: #CC8B13;
+    box-shadow: inset 0px -8px 0px #F2B137;
+}
+#reload i{
+    text-align: center;
+}
+@media only screen and (max-width: 400px) {
+    .game-container {
+        position: fixed;
+        margin: 100px;
+        padding: 0px !important;
+    }
+  }
+  
+  @media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .game-container {
+      background-color: green;
+    }
 }
